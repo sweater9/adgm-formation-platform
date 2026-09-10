@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="ADGM Formation Platform — Entity & Legal Automation" />
+  <meta name="theme-color" content="#ffffff" />
   <title>ADGM Formation Platform</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -17,10 +18,8 @@
           <span>Entity & Legal Automation</span>
         </div>
       </div>
-      <nav id="nav"></nav>
-      <div class="sidebar-note">
-        Independent workflow tool. Not an ADGM government website.
-      </div>
+      <nav id="nav" aria-label="Primary"></nav>
+      <div class="sidebar-note">Independent workflow tool. Not an ADGM government website.</div>
     </aside>
 
     <main class="main">
@@ -29,8 +28,10 @@
           <p class="eyebrow">Formation workspace</p>
           <h1 id="pageTitle">Dashboard</h1>
         </div>
-        <button class="secondary" id="resetBtn">Reset demo</button>
+        <button class="secondary" id="resetBtn">Reset data</button>
       </header>
+
+      <div id="appStatus" class="app-status" role="status" aria-live="polite"></div>
 
       <section id="dashboardView" class="view active">
         <div class="hero card">
@@ -41,19 +42,13 @@
           </div>
           <button class="primary" data-go="formation">Start formation</button>
         </div>
-
         <div class="stats" id="stats"></div>
-
         <div class="grid-2">
           <section class="card">
-            <div class="section-head">
-              <h3>Formation progress</h3>
-              <span id="progressLabel">0%</span>
-            </div>
+            <div class="section-head"><h3>Formation progress</h3><span id="progressLabel">0%</span></div>
             <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
             <div id="progressSteps" class="progress-list"></div>
           </section>
-
           <section class="card">
             <div class="section-head"><h3>Next actions</h3></div>
             <div id="nextActions" class="action-list"></div>
@@ -66,14 +61,11 @@
           <div class="card wizard-steps" id="wizardSteps"></div>
           <div class="card wizard-panel">
             <div class="section-head">
-              <div>
-                <p class="eyebrow" id="stepEyebrow">Step 1</p>
-                <h2 id="stepTitle"></h2>
-              </div>
+              <div><p class="eyebrow" id="stepEyebrow">Step 1</p><h2 id="stepTitle"></h2></div>
               <span class="pill" id="stepStatus">In progress</span>
             </div>
             <p id="stepDescription" class="muted"></p>
-            <form id="formationForm"></form>
+            <form id="formationForm" novalidate></form>
             <div class="wizard-actions">
               <button class="secondary" id="prevBtn" type="button">Previous</button>
               <button class="primary" id="saveNextBtn" type="button">Save & continue</button>
@@ -118,7 +110,7 @@
       </section>
     </main>
   </div>
-
+  <noscript>This application requires JavaScript to run.</noscript>
   <script src="app.js"></script>
 </body>
 </html>
