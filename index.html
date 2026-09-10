@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ADGM Formation Platform — Entity & Legal Automation" />
+  <title>ADGM Formation Platform</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">A</div>
+        <div>
+          <strong>ADGM Formation</strong>
+          <span>Entity & Legal Automation</span>
+        </div>
+      </div>
+      <nav id="nav"></nav>
+      <div class="sidebar-note">
+        Independent workflow tool. Not an ADGM government website.
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Formation workspace</p>
+          <h1 id="pageTitle">Dashboard</h1>
+        </div>
+        <button class="secondary" id="resetBtn">Reset demo</button>
+      </header>
+
+      <section id="dashboardView" class="view active">
+        <div class="hero card">
+          <div>
+            <p class="eyebrow">ADGM entity formation</p>
+            <h2>Move from setup to submission with one clear workflow.</h2>
+            <p>Organise company information, ownership, officers, UBO data and required documents before filing.</p>
+          </div>
+          <button class="primary" data-go="formation">Start formation</button>
+        </div>
+
+        <div class="stats" id="stats"></div>
+
+        <div class="grid-2">
+          <section class="card">
+            <div class="section-head">
+              <h3>Formation progress</h3>
+              <span id="progressLabel">0%</span>
+            </div>
+            <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+            <div id="progressSteps" class="progress-list"></div>
+          </section>
+
+          <section class="card">
+            <div class="section-head"><h3>Next actions</h3></div>
+            <div id="nextActions" class="action-list"></div>
+          </section>
+        </div>
+      </section>
+
+      <section id="formationView" class="view">
+        <div class="wizard-layout">
+          <div class="card wizard-steps" id="wizardSteps"></div>
+          <div class="card wizard-panel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow" id="stepEyebrow">Step 1</p>
+                <h2 id="stepTitle"></h2>
+              </div>
+              <span class="pill" id="stepStatus">In progress</span>
+            </div>
+            <p id="stepDescription" class="muted"></p>
+            <form id="formationForm"></form>
+            <div class="wizard-actions">
+              <button class="secondary" id="prevBtn" type="button">Previous</button>
+              <button class="primary" id="saveNextBtn" type="button">Save & continue</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="documentsView" class="view">
+        <section class="card">
+          <div class="section-head">
+            <div><p class="eyebrow">Readiness</p><h2>Document checklist</h2></div>
+            <span class="pill" id="docCount"></span>
+          </div>
+          <p class="muted">Track whether each supporting item is ready. Files are not uploaded in this reconstruction.</p>
+          <div id="documentList" class="checklist"></div>
+        </section>
+      </section>
+
+      <section id="reviewView" class="view">
+        <section class="card">
+          <div class="section-head">
+            <div><p class="eyebrow">Pre-submission</p><h2>Formation readiness review</h2></div>
+            <span class="pill" id="reviewStatus"></span>
+          </div>
+          <div id="reviewList" class="review-list"></div>
+        </section>
+      </section>
+
+      <section id="vaultView" class="view">
+        <section class="card">
+          <div class="section-head"><div><p class="eyebrow">Corporate records</p><h2>Entity vault</h2></div></div>
+          <div id="vaultList" class="vault-grid"></div>
+        </section>
+      </section>
+
+      <section id="complianceView" class="view">
+        <section class="card">
+          <div class="section-head"><div><p class="eyebrow">Post-incorporation</p><h2>Compliance calendar</h2></div></div>
+          <div id="complianceList" class="timeline"></div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
