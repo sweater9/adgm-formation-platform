@@ -1,0 +1,120 @@
+{
+  "product": {
+    "name": "ADGM Formation Platform",
+    "subtitle": "Entity & Legal Automation",
+    "sourcePreview": "https://startup-vault-16.preview.emergentagent.com",
+    "provenance": "Reconstructed from publicly identifiable product information and standard ADGM formation workflow concepts. This is not extracted private source code."
+  },
+  "navigation": [
+    {"id":"dashboard","label":"Dashboard"},
+    {"id":"formation","label":"Formation"},
+    {"id":"documents","label":"Documents"},
+    {"id":"review","label":"Readiness Review"},
+    {"id":"vault","label":"Entity Vault"},
+    {"id":"compliance","label":"Compliance Calendar"}
+  ],
+  "steps": [
+    {
+      "id":"company",
+      "title":"Company details",
+      "description":"Capture the proposed entity name, legal form and intended business activity.",
+      "fields":[
+        {"id":"companyName","label":"Proposed company name","type":"text","required":true},
+        {"id":"legalForm","label":"Legal form","type":"select","required":true,"options":["Private Company Limited by Shares","Restricted Scope Company","Holding Company","Branch of a Foreign Company","Special Purpose Vehicle"]},
+        {"id":"businessActivity","label":"Primary business activity","type":"text","required":true},
+        {"id":"businessDescription","label":"Business description","type":"textarea","required":true}
+      ]
+    },
+    {
+      "id":"applicants",
+      "title":"Applicants & founders",
+      "description":"Record the people or entities establishing the company.",
+      "fields":[
+        {"id":"founderName","label":"Founder / applicant name","type":"text","required":true},
+        {"id":"founderType","label":"Applicant type","type":"select","required":true,"options":["Individual","Corporate shareholder"]},
+        {"id":"nationality","label":"Nationality / jurisdiction","type":"text","required":true},
+        {"id":"contactEmail","label":"Contact email","type":"email","required":true}
+      ]
+    },
+    {
+      "id":"ownership",
+      "title":"Share capital & ownership",
+      "description":"Define the capital structure and initial ownership profile.",
+      "fields":[
+        {"id":"shareCapital","label":"Issued share capital","type":"number","required":true},
+        {"id":"currency","label":"Currency","type":"select","required":true,"options":["AED","USD","GBP","EUR"]},
+        {"id":"shareholderName","label":"Shareholder name","type":"text","required":true},
+        {"id":"ownershipPct","label":"Ownership %","type":"number","required":true}
+      ]
+    },
+    {
+      "id":"officers",
+      "title":"Directors & signatories",
+      "description":"Capture directors and authorised signatories for the proposed entity.",
+      "fields":[
+        {"id":"directorName","label":"Director name","type":"text","required":true},
+        {"id":"directorNationality","label":"Director nationality","type":"text","required":true},
+        {"id":"signatoryName","label":"Authorised signatory","type":"text","required":true},
+        {"id":"signingAuthority","label":"Signing authority","type":"select","required":true,"options":["Sole","Joint","Board-authorised"]}
+      ]
+    },
+    {
+      "id":"ubo",
+      "title":"Beneficial ownership",
+      "description":"Record ultimate beneficial owner information for readiness review.",
+      "fields":[
+        {"id":"uboName","label":"UBO full name","type":"text","required":true},
+        {"id":"uboNationality","label":"UBO nationality","type":"text","required":true},
+        {"id":"uboOwnership","label":"Effective ownership / control %","type":"number","required":true},
+        {"id":"uboBasis","label":"Basis of control","type":"select","required":true,"options":["Share ownership","Voting rights","Other control"]}
+      ]
+    },
+    {
+      "id":"office",
+      "title":"Registered office",
+      "description":"Capture the proposed registered office and contact information.",
+      "fields":[
+        {"id":"officeAddress","label":"Registered office address","type":"textarea","required":true},
+        {"id":"officePhone","label":"Contact phone","type":"text","required":true},
+        {"id":"officeEmail","label":"Entity email","type":"email","required":true}
+      ]
+    },
+    {
+      "id":"declarations",
+      "title":"Declarations",
+      "description":"Complete the internal readiness declarations before review.",
+      "fields":[
+        {"id":"sourceOfFunds","label":"Source of funds summary","type":"textarea","required":true},
+        {"id":"purpose","label":"Purpose of incorporation","type":"textarea","required":true},
+        {"id":"declarationName","label":"Declarant full name","type":"text","required":true}
+      ]
+    }
+  ],
+  "documents": [
+    "Passport / identity document for each individual applicant",
+    "Proof of residential address",
+    "Corporate constitutional documents for corporate shareholders",
+    "Ownership / group structure chart",
+    "Director identification documents",
+    "Authorised signatory identification documents",
+    "Ultimate beneficial owner evidence",
+    "Registered office evidence",
+    "Business plan or activity description where applicable",
+    "Board / shareholder approvals where applicable"
+  ],
+  "vaultCategories": [
+    {"name":"Constitutional documents","description":"Articles, resolutions and incorporation records"},
+    {"name":"Ownership records","description":"Registers, shareholding and UBO evidence"},
+    {"name":"Officer records","description":"Directors, signatories and appointment documents"},
+    {"name":"Identity records","description":"KYC and identification evidence"},
+    {"name":"Regulatory records","description":"Licences, filings and authority correspondence"},
+    {"name":"Annual records","description":"Renewals, annual returns and compliance evidence"}
+  ],
+  "compliance": [
+    {"when":"On change","title":"Update corporate records","description":"Review filings when directors, shareholders, UBOs, registered office or other material particulars change."},
+    {"when":"Ongoing","title":"Maintain statutory registers","description":"Keep corporate and beneficial ownership records current and internally consistent."},
+    {"when":"Periodic","title":"Licence and registration review","description":"Track renewal dates and any conditions attached to the entity's licence or registration."},
+    {"when":"Annual","title":"Annual filings / return readiness","description":"Prepare required annual corporate information and supporting records ahead of applicable deadlines."},
+    {"when":"Ongoing","title":"Record retention","description":"Maintain formation, ownership, governance and compliance evidence in accordance with applicable requirements."}
+  ]
+}
